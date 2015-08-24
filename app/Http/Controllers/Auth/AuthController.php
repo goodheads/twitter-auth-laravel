@@ -113,9 +113,9 @@ class AuthController extends Controller
 
         return User::create([
             'name' => $twitterUser->name,
-            'email' => $twitterUser->email,
+            'handle' => $twitterUser->nickname,
             'twitter_id' => $twitterUser->id,
-            'avatar' => $twitterUser->avatar
+            'avatar' => $twitterUser->avatar_original
         ]);
     }
 
